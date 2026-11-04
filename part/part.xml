@@ -1,7 +1,7 @@
 
 var id = new URLSearchParams(location.search).get("id") || "sports";
 
-fetch("https://bosslive420.github.io/obama/loader.xml" + id + ".html")
+fetch("https://bosslive420.github.io/obama/" + id + ".html")
   .then(e => e.text())
   .then(e => {
     document.open(),
